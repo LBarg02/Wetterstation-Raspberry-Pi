@@ -17,18 +17,22 @@ root.geometry("800x500+300+300")
 IO.setmode(IO.BCM)
 IO.setwarnings(False)
 
+#I²C-Bus für den A/D-Wandler
 adc = ADS1115()
 i2cbus = SMBus(1)
 adc.start_adc(1)
 
+#Initialisierung der Kamera
 cam = PiCamera()
-cam.resolution = (550,420)
+cam.resolution = (550,420) #Größe entsprechend der GUI
 
+#Speicherort für das Bild + erste Aufnahme
 path = "file.jpg"
 cam.capture(path)
 img = Image.open(path)
 img = ImageTk.PhotoImage(img)
-    
+
+#Funktion zum aktualisien der Wetter-Daten
 def refresh():
     
     #Temperatur:
@@ -88,6 +92,7 @@ def refresh():
     labelString = day + curTime
     timeLabel.config(text = labelString)
 
+#Funktion zum Beenden des Programms
 def close():
     
     print ("Programm beendet")
@@ -96,7 +101,7 @@ def close():
     sys.exit()
     
 
-
+#Inhalt der GUI
 tempLabel = Label(root,text="Temperatur:", bg="white", font="Verdana 12 bold", highlightthickness=2, highlightbackground="black", highlightcolor="black")
 tempLabel.place(x=10, y=15, width=150, height=30)
 
@@ -129,6 +134,7 @@ panel = Label(root, image = img)
 panel.image = img
 panel.place(x=200, y=15, width=550, height=420)
 
+#Erstmalige Aktualisierung beim Start des Programms
 refresh()
 
 root.mainloop()
