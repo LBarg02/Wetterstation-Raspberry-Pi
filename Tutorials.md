@@ -1,4 +1,4 @@
-# Wetterstation-Raspberry-Pi
+# Tutorials
 
 Thermometer/Hygrometer DHT22:
 https://www.einplatinencomputer.com/raspberry-pi-temperatur-und-luftfeuchtigkeitssensor-dht22/
