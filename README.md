@@ -13,3 +13,5 @@ Mögliche Ziele:
 In Zunkunft soll einerseits zusätzlich der aktuelle Sonnenauf- und Untergang ausgegeben werden, welcher auch die Wetterprognosen der Photozelle beeinflusst (Sonnenfinsternis oder Nacht). Die Daten des Auf- und Untergangs sollen automatisch aus dem Internet gezogen werden und dementsprechend je nach Datum variieren.
 
 Andererseits soll eventuell ein Webserver eingerichtet werden, sodass man durch das Aufrufen der Domain die GUI bspw. auf seinem Handy sehen und bedienen kann.
+
+Desweiteren könnte man nach Belieben noch ein Barometer verbauen, wobei man die eventuelle Notwendigkeit eines A/D-Wandlers beachten müsste.
